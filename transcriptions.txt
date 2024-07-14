@@ -1,0 +1,3 @@
+Transcrição do áudio 1:
+testando biblioteca do Python para transcrição de texto 1 2 3 teste ele tem que reconhecer o que eu tô falando e transcrever em um arquivo TXT que está na própria pasta do projeto
+
