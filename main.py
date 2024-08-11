@@ -12,13 +12,12 @@ def transcribe_audio(file_path):
         except sr.RequestError as e:
             return f"[Erro na solicitação de reconhecimento de fala: {e}]"
 
-audio_files = ["./audioteste.wav"]
+audio_file = "./audioteste.wav"
 
-transcriptions = [transcribe_audio(file) for file in audio_files]
+transcription = transcribe_audio(audio_file)
 
 with open("transcriptions.txt", "w") as file:
-    for idx, transcription in enumerate(transcriptions):
-        file.write(f"Transcrição do áudio {idx+1}:\n")
-        file.write(transcription + "\n\n")
+    file.write("Transcrição do áudio:\n")
+    file.write(transcription + "\n")
 
-print("Transcrições salvas em 'transcriptions.txt'")
+print("Transcrição salva em 'transcriptions.txt'")
